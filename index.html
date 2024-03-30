@@ -98,12 +98,26 @@
 </script>
 <div id="song" style="display: flex; align-items: center;"></div>
 <style> #song {
-  background-color: #191414;
-  border: 8px #1DB954;
+  background-color: black;
+  border: 3px solid green;
   max-width: 200px;
   max-height: 50px;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
-  padding: 0px; /* Adjust padding as needed */
+  padding: 5px; /* Adjust padding as needed */
+}
+
+#song:hover {
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
+
 }</style>
